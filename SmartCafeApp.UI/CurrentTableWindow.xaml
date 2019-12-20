@@ -17,35 +17,31 @@
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Button Name="Back_Button" Click="Back_Button_Click" Content="Назад" Height="30" Width="90px" HorizontalAlignment="Left" Margin="10 10 0 10"></Button>
 
-        <Button Name="Add_Button" Content="Add an order" Grid.Column="1" Grid.Row="1" Height="50" Width="125" Margin="5" FontFamily="Open Sans" FontSize="16" Foreground="Black" Background="#45ff7f" FontWeight="Medium"></Button>
-        <Button Name="Delete_Button" Content="Delete an order" Grid.Column="1" Grid.Row="2" Height="50" Width="125" Margin="5" FontFamily="Open Sans" FontSize="16" Foreground="Black" Background="#ff6945" FontWeight="Medium"></Button>
-        <WrapPanel Orientation="Vertical" Grid.Column="1" Grid.Row="3">
-            <TextBlock Margin="5" FontFamily="Open Sans" FontSize="16" Foreground="Black" FontWeight="Medium" Text="{Binding Path=Oder.Price, StringFormat='Total price: {0}'}"></TextBlock>
+        <Button Click="Back_Button_Click" Grid.Row="0" Grid.Column="1" Content="Close" Background="LightGray" Panel.ZIndex="1" Height="55" VerticalAlignment="Top" Width="100" HorizontalAlignment="Right"></Button>
+
+        <WrapPanel Orientation="Vertical" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0">
+            <TextBlock FontFamily="Open Sans" FontSize="30" Background="#F0F8FF" Width="800" Padding="10 10 0 10" FontWeight="Medium">SmartCafeApp</TextBlock>
+            <TextBlock FontFamily="Open Sans" Margin="10 5 0 0" FontSize="20" FontWeight="Medium">Table orders</TextBlock>
+            <TextBlock FontFamily="Open Sans" Margin="10 0 0 0" FontSize="14" FontWeight="Normal" Padding="0 5 0 10">Here you can manage certain table's orders</TextBlock>
         </WrapPanel>
 
-        <Canvas Grid.Row="1" Grid.Column="0" VerticalAlignment="Bottom">
-            <TextBlock Canvas.Left="10" FontFamily="Open Sans" FontSize="12">Order ID</TextBlock>
-            <TextBlock Canvas.Right="150" FontFamily="Open Sans" FontSize="12">Price</TextBlock>
-        </Canvas>
+        <ListBox Grid.Row="1" Grid.Column="0" x:Name="ordersList" SelectionChanged="ordersList_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <TextBlock FontSize="16" Text="{Binding Path=OrderId}" HorizontalAlignment="Center" />
+                        <TextBlock FontSize="16" Text="{Binding Path=OrderDateTime}" HorizontalAlignment="Center" />
+                        <TextBlock FontSize="16" Text="{Binding Path=OrderTotalPrice}" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
-        <WrapPanel Grid.Column="0" Grid.Row="2" Grid.RowSpan="3">
-            <ListBox Margin="3" Name="listBoxCurrentTableOrders" Grid.Row="1" HorizontalContentAlignment="Stretch">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock FontFamily="Open Sans" FontSize="16" Text="{Binding Id, StringFormat=d}"/>
-                            <TextBlock FontFamily="Open Sans" FontSize="16" Grid.Column="1" Text="{Binding TotalPrice, StringFormat={}{0} Rub}"/>
-                        </Grid>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+        <WrapPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+            <Button Content="Add a new order" Height="50" Width="200" Name="Order_Add" Background="GreenYellow"></Button>
+            <Button Content="Delete an order" Margin="0 10 0 0 " Height="50" Background="Red"></Button>
         </WrapPanel>
+
     </Grid>
 </Window>

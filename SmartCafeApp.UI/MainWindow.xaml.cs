@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace SmartCafeApp.UI
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -25,9 +25,16 @@ namespace SmartCafeApp.UI
             InitializeComponent();
         }
 
-        private void A1_Click(object sender, RoutedEventArgs e)
+        private void Table_Click(object sender, RoutedEventArgs e)
         {
             CurrentTableWindow Win = new CurrentTableWindow();
+            Win.Show();
+            this.Close();
+        }
+
+        private void Cashier_Click(object sender, RoutedEventArgs e)
+        {
+            CashierWindowLog Win = new CashierWindowLog();
             Win.Show();
             this.Close();
         }

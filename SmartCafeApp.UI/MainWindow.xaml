@@ -6,75 +6,85 @@
         xmlns:local="clr-namespace:SmartCafeApp.UI"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800">
-    <TabControl>
-        <TabItem>
-            <TabItem.Header>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Margin="3">Зона "А"</TextBlock>
-                </StackPanel>
-            </TabItem.Header>
-            <TabItem.Content>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"></RowDefinition>
-                        <RowDefinition Height="100"></RowDefinition>
-                        <RowDefinition Height="100"></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
+  <TabControl>
+    <TabItem>
+      <TabItem.Header>
+        <StackPanel Orientation="Horizontal">
+          <TextBlock Margin="3">Area "A"</TextBlock>
+        </StackPanel>
+      </TabItem.Header>
+      <TabItem.Content>
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+          </Grid.RowDefinitions>
 
-                    <StackPanel Grid.ColumnSpan="3">
-                        <TextBlock FontFamily="Open Sans" FontSize="20" Background="#F0F8FF" Padding="10 10 0 10" FontWeight="Medium">SmartCafeApp</TextBlock>
-                        <TextBlock FontFamily="Open Sans" FontSize="16" Padding="10 5 0 0" FontWeight="Normal">Столы зоны "А"</TextBlock>
-                        <TextBlock FontFamily="Open Sans" FontSize="12" Padding="10 5 0 10" FontWeight="Normal">Выберете стол, чтобы отследить заказы</TextBlock>
-                    </StackPanel>
+          <StackPanel Grid.ColumnSpan="3">
+            <TextBlock FontFamily="Open Sans" FontSize="30" Background="#F0F8FF" Padding="10 10 0 10" FontWeight="Medium">SmartCafeApp</TextBlock>
+            <TextBlock FontFamily="Open Sans" FontSize="20" Padding="10 5 0 0" FontWeight="Medium">Tables in area "A"</TextBlock>
+            <TextBlock FontFamily="Open Sans" FontSize="14" Padding="10 5 0 10" FontWeight="Normal">Choose table to manage its orders</TextBlock>
+          </StackPanel>
 
-                    <Button Click="A1_Click" Grid.Column="0" Grid.Row="1" Name="A1" Content="A1" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
-                    <Button Grid.Column="1" Grid.Row="1" Name="A2" Content="A2" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
-                    <Button Grid.Column="2" Grid.Row="1" Name="A3" Content="A3" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
+          <Button Click="Table_Click" Grid.Column="0" Grid.Row="1" Name="A1" Content="A1" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
+          <Button Click="Table_Click" Grid.Column="1" Grid.Row="1" Name="A2" Content="A2" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
+          <Button Click="Table_Click" Grid.Column="2" Grid.Row="1" Name="A3" Content="A3" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
 
-                    <Button Grid.Column="0" Grid.Row="2" Name="A4" Content="A4" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
-                    <Button Grid.Column="1" Grid.Row="2" Name="A5" Content="A5" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
-                    <Button Grid.Column="2" Grid.Row="2" Name="A6" Content="A6" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
+          <Button Click="Table_Click" Grid.Column="0" Grid.Row="2" Name="A4" Content="A4" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
+          <Button Click="Table_Click" Grid.Column="1" Grid.Row="2" Name="A5" Content="A5" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
+          <Button Click="Table_Click" Grid.Column="2" Grid.Row="2" Name="A6" Content="A6" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
 
-                </Grid>
-            </TabItem.Content>
-        </TabItem>
-        <TabItem>
-            <TabItem.Header>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Margin="3">Зона "B"</TextBlock>
-                </StackPanel>
-            </TabItem.Header>
-            <TabItem.Content>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"></RowDefinition>
-                        <RowDefinition Height="100"></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
+          <WrapPanel Grid.Row="3" Grid.ColumnSpan="3" Margin="10 30 10 0 " Orientation="Vertical">
+            <TextBlock FontFamily="Open Sans" FontSize="20" FontWeight="Medium">Cashier mode</TextBlock>
+            <TextBlock FontFamily="Open Sans" FontSize="14" FontWeight="Normal" Padding="0 5 0 10">If you're a cashier, please log in</TextBlock>
+            <Button Name="Cashier_Button" Click="Cashier_Click" Content="Log in" Height="50" Width="200" Background="GreenYellow"></Button>
+          </WrapPanel>
+        </Grid>
+      </TabItem.Content>
+    </TabItem>
+    <TabItem>
+      <TabItem.Header>
+        <StackPanel Orientation="Horizontal">
+          <TextBlock Margin="3">Area "B"</TextBlock>
+        </StackPanel>
+      </TabItem.Header>
+      <TabItem.Content>
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+          </Grid.RowDefinitions>
 
-                    <StackPanel Grid.ColumnSpan="3">
-                        <TextBlock FontFamily="Open Sans" FontSize="20" Background="#F0F8FF" Padding="10 10 0 10" FontWeight="Medium">SmartCafeApp</TextBlock>
-                        <TextBlock FontFamily="Open Sans" FontSize="16" Padding="10 5 0 0" FontWeight="Normal">Столы зоны "B"</TextBlock>
-                        <TextBlock FontFamily="Open Sans" FontSize="12" Padding="10 5 0 10" FontWeight="Normal">Выберете стол, чтобы отследить заказы</TextBlock>
-                    </StackPanel>
+          <StackPanel Grid.ColumnSpan="3">
+            <TextBlock FontFamily="Open Sans" FontSize="30" Background="#F0F8FF" Padding="10 10 0 10" FontWeight="Medium">SmartCafeApp</TextBlock>
+            <TextBlock FontFamily="Open Sans" FontSize="20" Padding="10 5 0 0" FontWeight="Medium">Tables in area "B"</TextBlock>
+            <TextBlock FontFamily="Open Sans" FontSize="14" Padding="10 5 0 10" FontWeight="Normal">Choose table to manage its orders</TextBlock>
+          </StackPanel>
 
-                    <Button Grid.Column="0" Grid.Row="1" Name="B1" Content="B1" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
-                    <Button Grid.Column="1" Grid.Row="1" Name="B2" Content="B2" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
-                    <Button Grid.Column="2" Grid.Row="1" Name="B3" Content="B3" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
+          <Button Click="Table_Click" Grid.Column="0" Grid.Row="1" Name="B1" Content="B1" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
+          <Button Click="Table_Click" Grid.Column="1" Grid.Row="1" Name="B2" Content="B2" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
+          <Button Click="Table_Click" Grid.Column="2" Grid.Row="1" Name="B3" Content="B3" Background="#72A0C1" Height="50" Width="200" Margin="10" HorizontalAlignment="Left"></Button>
 
-                </Grid>
-            </TabItem.Content>
-        </TabItem>
-    </TabControl>
+          <WrapPanel Grid.Row="3" Grid.ColumnSpan="3" Margin="10 30 10 0 " Orientation="Vertical">
+            <TextBlock FontFamily="Open Sans" FontSize="20" FontWeight="Medium">Cashier mode</TextBlock>
+            <TextBlock FontFamily="Open Sans" FontSize="14" FontWeight="Normal" Padding="0 5 0 10">If you're a cashier, please log in</TextBlock>
+            <Button Name="Cashier_Button_B" Click="Cashier_Click" Content="Log in" Height="50" Width="200" Background="GreenYellow"></Button>
+          </WrapPanel>
+        </Grid>
+      </TabItem.Content>
+    </TabItem>
+  </TabControl>
 </Window>

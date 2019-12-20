@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -29,6 +27,11 @@ namespace SmartCafeApp.UI
             MainWindow Win = new MainWindow();
             Win.Show();
             this.Close();
+        }
+
+        private void ordersList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            return;
         }
     }
 }

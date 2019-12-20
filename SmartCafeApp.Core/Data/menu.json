@@ -1,0 +1,52 @@
+﻿[
+	{
+		"Id": 1,
+		"Name": "Beef steak",
+		"MealType": "Main courses",
+		"Ingridients": "beef, vegetables",
+		"Calories": 240,
+		"Weight": 100,
+		"Price": 250,
+		"IsAvailable": "true"
+	},
+	{
+		"Id": 2,
+		"Name": "Cold cuts",
+		"MealType": "Cold dishes",
+		"Ingridients": "nuremberg, munich, krajinska with cheese",
+		"Calories": 825,
+		"Weight": 50,
+		"Price": 750,
+		"IsAvailable": "true"
+	},
+	{
+		"Id": 3,
+		"Name": "Greek salad",
+		"MealType": "Salads",
+		"Ingridients": "tomatoes, cucumbers, feta, shallots and olives, black pepper, oregano",
+		"Calories": 75,
+		"Weight": 300,
+		"Price": 400,
+		"IsAvailable": "true"
+	},
+	{
+		"Id": 4,
+		"Name": "Cheesecake",
+		"MealType": "Desserts",
+		"Ingridients": "cheese, eggs, sugar",
+		"Calories": 825,
+		"Weight": 150,
+		"Price": 180,
+		"IsAvailable": "true"
+	},
+	{
+		"Id": 5,
+		"Name": "Coca-Cola",
+		"MealType": "Drinks",
+		"Ingridients": ,
+		"Calories": 25,
+		"Weight": 50,
+		"Price": 80,
+		"IsAvailable": "true"
+	},
+]

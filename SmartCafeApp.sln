@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCafeApp.Core", "SmartCafeApp.Core\SmartCafeApp.Core.csproj", "{E2269604-7B51-4879-83B6-8B650E0A4875}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartCafeApp.Core", "SmartCafeApp.Core\SmartCafeApp.Core.csproj", "{E2269604-7B51-4879-83B6-8B650E0A4875}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCafeApp.UI", "SmartCafeApp.UI\SmartCafeApp.UI.csproj", "{48D7C7BA-ABB2-4157-9D95-2606A3A7149E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{E2269604-7B51-4879-83B6-8B650E0A4875}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2269604-7B51-4879-83B6-8B650E0A4875}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2269604-7B51-4879-83B6-8B650E0A4875}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48D7C7BA-ABB2-4157-9D95-2606A3A7149E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48D7C7BA-ABB2-4157-9D95-2606A3A7149E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48D7C7BA-ABB2-4157-9D95-2606A3A7149E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48D7C7BA-ABB2-4157-9D95-2606A3A7149E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

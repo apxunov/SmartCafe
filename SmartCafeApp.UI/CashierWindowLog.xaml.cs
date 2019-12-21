@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -13,25 +15,27 @@ using System.Windows.Shapes;
 namespace SmartCafeApp.UI
 {
     /// <summary>
-    /// Логика взаимодействия для CurrentTableWindow.xaml
+    /// Логика взаимодействия для CashierWindowLog.xaml
     /// </summary>
-    public partial class CurrentTableWindow : Window
+    public partial class CashierWindowLog : Window
     {
-        public CurrentTableWindow()
+        public CashierWindowLog()
         {
             InitializeComponent();
         }
 
-        private void Back_Button_Click(object sender, RoutedEventArgs e)
+        private void Cashier_Log_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow Win = new MainWindow();
+            CashierModeWindow Win = new CashierModeWindow();
             Win.Show();
             this.Close();
         }
 
-        private void ordersList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Cancel_Button_Click(object sender, RoutedEventArgs e)
         {
-            return;
+            MainWindow Win = new MainWindow();
+            Win.Show();
+            this.Close();
         }
     }
 }

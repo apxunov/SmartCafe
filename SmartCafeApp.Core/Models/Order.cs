@@ -1,18 +1,28 @@
-﻿using SmartCafeApp.Core.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace SmartCafeApp.Core.Models
 {
-    public class Order : IEntity
+    public class Order
     {
         public int Id { get; set; }
-        public List<OrderItem> Orders { get; set; }
+        public List<OrderItem> Items { get; set; }
         public decimal? TotalPrice { get; set; }
-        
-        public bool IsValid()
+        public DateTime OrderTime { get; set; }
+
+
+        public decimal GetCost(Order order)
         {
-            return (Id > 0);
+            decimal cost = 0;
+            foreach (var item in Items)
+            {
+                foreach (var meal in item.Meals)
+                {
+                    cost = cost + meal.Price;
+                }
+            }
+            order.TotalPrice = cost;
+            return order.TotalPrice.Value;
         }
     }
 }

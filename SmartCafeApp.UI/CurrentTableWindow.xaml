@@ -1,0 +1,51 @@
+﻿<Window x:Class="SmartCafeApp.UI.CurrentTableWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartCafeApp.UI"
+        mc:Ignorable="d"
+        Title="CurrentTableWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Name="Back_Button" Click="Back_Button_Click" Content="Назад" Height="30" Width="90px" HorizontalAlignment="Left" Margin="10 10 0 10"></Button>
+
+        <Button Name="Add_Button" Content="Add an order" Grid.Column="1" Grid.Row="1" Height="50" Width="125" Margin="5" FontFamily="Open Sans" FontSize="16" Foreground="Black" Background="#45ff7f" FontWeight="Medium"></Button>
+        <Button Name="Delete_Button" Content="Delete an order" Grid.Column="1" Grid.Row="2" Height="50" Width="125" Margin="5" FontFamily="Open Sans" FontSize="16" Foreground="Black" Background="#ff6945" FontWeight="Medium"></Button>
+        <WrapPanel Orientation="Vertical" Grid.Column="1" Grid.Row="3">
+            <TextBlock Margin="5" FontFamily="Open Sans" FontSize="16" Foreground="Black" FontWeight="Medium" Text="{Binding Path=Oder.Price, StringFormat='Total price: {0}'}"></TextBlock>
+        </WrapPanel>
+
+        <Canvas Grid.Row="1" Grid.Column="0" VerticalAlignment="Bottom">
+            <TextBlock Canvas.Left="10" FontFamily="Open Sans" FontSize="12">Order ID</TextBlock>
+            <TextBlock Canvas.Right="150" FontFamily="Open Sans" FontSize="12">Price</TextBlock>
+        </Canvas>
+
+        <WrapPanel Grid.Column="0" Grid.Row="2" Grid.RowSpan="3">
+            <ListBox Margin="3" Name="listBoxCurrentTableOrders" Grid.Row="1" HorizontalContentAlignment="Stretch">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock FontFamily="Open Sans" FontSize="16" Text="{Binding Id, StringFormat=d}"/>
+                            <TextBlock FontFamily="Open Sans" FontSize="16" Grid.Column="1" Text="{Binding TotalPrice, StringFormat={}{0} Rub}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </WrapPanel>
+    </Grid>
+</Window>
